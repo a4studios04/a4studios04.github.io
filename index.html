@@ -3,72 +3,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <title>A4Studios - Build Systems That Work</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Your go-to resource for all my projects and skills.</p>
-            <a href="#projects" class="btn">View Projects</a>
-        </section>
-    </header>
-
-    <main>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Project Title 1</h3>
-                <p>Brief description of Project 1.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-item">
-                <h3>Project Title 2</h3>
-                <p>Brief description of Project 2.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <!-- More projects as necessary -->
-        </section>
-
-        <section id="interactive-demo">
-            <h2>Interactive Demo</h2>
-            <p>Check out my latest interactive project.</p>
-            <a href="#" class="btn">Try it out</a>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <!-- More skills -->
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">A4Studios</div>
+            <ul class="nav-menu">
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#demo" class="nav-link">Demo</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </section>
+        </div>
+    </nav>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Short bio about yourself, your interests, and your journey.</p>
-        </section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                I build systems that <span class="highlight">shouldn't exist</span> — but work.
+            </h1>
+            <p class="hero-subtitle">
+                Automation. Reverse engineering. Experimental apps that push the boundaries.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                    View Projects
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('demo').scrollIntoView({behavior: 'smooth'})">
+                    Try Demo
+                </button>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2>Projects</h2>
+            <p>Real problems. Unconventional solutions.</p>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 My Personal Website</p>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Smart TV Casting System</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">API Reverse Eng.</span>
+                        <span class="tech-tag">DLNA</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Cast any video stream to your TV without official apps. Built a custom protocol handler that bypasses standard limitations.
+                </p>
+                <div class="project-buttons">
+                    <button class="btn-small btn-demo">Live Demo</button>
+                    <button class="btn-small btn-code">View Code</button>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Android Automation Suite</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">ADB</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Control Android devices remotely via ADB. Automate complex workflows, screen interactions, and device management at scale.
+                </p>
+                <div class="project-buttons">
+                    <button class="btn-small btn-demo">Live Demo</button>
+                    <button class="btn-small btn-code">View Code</button>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Streaming Protocol Analyzer</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">WebSockets</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Network</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Intercept, decode, and manipulate streaming protocols in real-time. Built tools to understand proprietary broadcast systems.
+                </p>
+                <div class="project-buttons">
+                    <button class="btn-small btn-demo">Live Demo</button>
+                    <button class="btn-small btn-code">View Code</button>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>API Reverse Engineering Framework</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTTP Proxying</span>
+                        <span class="tech-tag">Pattern Analysis</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Extract hidden APIs from mobile apps. Automated tools to discover, document, and integrate unofficial endpoints safely.
+                </p>
+                <div class="project-buttons">
+                    <button class="btn-small btn-demo">Live Demo</button>
+                    <button class="btn-small btn-code">View Code</button>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Experimental Media Player</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">Custom Codecs</span>
+                        <span class="tech-tag">WebGL</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Built a media player that handles edge-case formats. Includes custom streaming protocol support and real-time transcoding.
+                </p>
+                <div class="project-buttons">
+                    <button class="btn-small btn-demo">Live Demo</button>
+                    <button class="btn-small btn-code">View Code</button>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Device Fingerprinting Tool</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Browser APIs</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Identify devices using unique hardware/software signatures. Privacy-focused tool for device tracking and authentication.
+                </p>
+                <div class="project-buttons">
+                    <button class="btn-small btn-demo">Live Demo</button>
+                    <button class="btn-small btn-code">View Code</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE DEMO SECTION -->
+    <section id="demo" class="demo-section">
+        <div class="section-header">
+            <h2>Interactive Demo</h2>
+            <p>Try the casting system in action</p>
+        </div>
+
+        <div class="demo-container">
+            <div class="demo-input-area">
+                <input 
+                    type="text" 
+                    id="videoInput" 
+                    class="demo-input" 
+                    placeholder="Enter video URL or press 'Demo Cast' to try..."
+                >
+                <button class="btn btn-primary" onclick="startCasting()">Demo Cast</button>
+            </div>
+
+            <div class="demo-output" id="demoOutput" style="display: none;">
+                <div class="casting-animation">
+                    <div class="signal-wave"></div>
+                    <div class="signal-wave"></div>
+                    <div class="signal-wave"></div>
+                </div>
+                <div class="casting-info">
+                    <p class="casting-status" id="castingStatus">Connecting to device...</p>
+                    <p class="casting-detail" id="castingDetail">Samsung Smart TV (Living Room)</p>
+                    <div class="casting-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" onclick="stopCasting()">Stop Casting</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <h2>System Capabilities</h2>
+            <p>What I build and how deep I go</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-header">
+                    <h3>Automation & Scripting</h3>
+                    <span class="skill-level">95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 95%"></div>
+                </div>
+                <p class="skill-desc">Python, JavaScript, Bash. From mobile automation (ADB) to server orchestration.</p>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <h3>Reverse Engineering</h3>
+                    <span class="skill-level">88%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 88%"></div>
+                </div>
+                <p class="skill-desc">API discovery, protocol analysis, binary inspection. Finding hidden endpoints.</p>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <h3>Streaming & Media</h3>
+                    <span class="skill-level">85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 85%"></div>
+                </div>
+                <p class="skill-desc">DLNA, HLS, DASH, custom protocols. Real-time streaming and transcoding.</p>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <h3>Frontend Engineering</h3>
+                    <span class="skill-level">92%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 92%"></div>
+                </div>
+                <p class="skill-desc">Vanilla JS, responsive design, performance optimization. No bloat.</p>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <h3>Backend Architecture</h3>
+                    <span class="skill-level">87%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 87%"></div>
+                </div>
+                <p class="skill-desc">Node.js, database design, API development. Building scalable systems.</p>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <h3>Android Development</h3>
+                    <span class="skill-level">83%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 83%"></div>
+                </div>
+                <p class="skill-desc">ADB, device control, custom ROMs. Deep Android ecosystem knowledge.</p>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h3>Tech Stack</h3>
+            <div class="tag-cloud">
+                <span class="tag">Python</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">React</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">ADB</span>
+                <span class="tag">Docker</span>
+                <span class="tag">APIs</span>
+                <span class="tag">ffmpeg</span>
+                <span class="tag">Database Design</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About</h2>
+            <p>How I approach building</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I don't follow the rulebook. I find the edge cases, exploit them, and build something useful from the chaos.
+                </p>
+                <p>
+                    Started as someone who liked to understand how things work. Now I build them from scratch — automation tools, streaming systems, experimental apps that shouldn't work but do.
+                </p>
+                <p>
+                    <strong>My approach:</strong> Learn by doing. Find unconventional solutions. Build tools that solve real problems, even if they require hacking the system to get there.
+                </p>
+                <p>
+                    I reverse-engineer APIs, control devices remotely, stream video through impossible channels, and automate workflows that were supposed to stay manual. Each project is a puzzle.
+                </p>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Active Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">From Scratch</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Problem Solver</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Talk to me about your next project</p>
+        </div>
+
+        <div class="contact-buttons">
+            <a href="https://github.com/a4studios04" class="contact-btn" target="_blank">
+                <span>GitHub</span>
+            </a>
+            <a href="mailto:contact@a4studios.dev" class="contact-btn">
+                <span>Email</span>
+            </a>
+            <a href="https://wa.me/1234567890" class="contact-btn" target="_blank">
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 A4Studios. Building systems that work.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
